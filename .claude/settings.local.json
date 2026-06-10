@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\User2\\\\Desktop\\\\ArtDeco\" -Force)",
+      "Bash(Select-Object Name, Mode)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\User2\\\\Desktop\\\\ArtDeco\" -Filter \"*.html\")",
+      "Bash(Select-Object Name)",
+      "PowerShell(\\(Get-ChildItem -Path \"c:\\\\Users\\\\User2\\\\Desktop\\\\ArtDeco\\\\css\\\\style.css\"\\).Length)",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\images\\\\logo\")",
+      "PowerShell(Copy-Item \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\logo \\(2\\)\\\\web\\\\logo-web-transparent-white.png\" \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\images\\\\logo\\\\logo-white.png\")",
+      "PowerShell(Copy-Item \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\logo \\(2\\)\\\\web\\\\logo-web-transparent-black.png\" \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\images\\\\logo\\\\logo-black.png\")",
+      "PowerShell(Copy-Item \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\logo \\(2\\)\\\\favicon\\\\favicon.svg\" \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\images\\\\logo\\\\favicon.svg\")",
+      "PowerShell(Copy-Item \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\logo \\(2\\)\\\\favicon\\\\favicon-32.png\" \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\images\\\\logo\\\\favicon-32.png\")",
+      "PowerShell(Copy-Item \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\logo \\(2\\)\\\\favicon\\\\favicon-16.png\" \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\images\\\\logo\\\\favicon-16.png\")",
+      "PowerShell(Copy-Item \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\logo \\(2\\)\\\\web\\\\logo-web-transparent.png\" \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\images\\\\logo\\\\logo-color.png\")",
+      "Bash(dir *.html /b)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Design Arhitectonica\\.claude\\projects\\c--xampp-htdocs-ArtDeco\\memory"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+Merci pour votre achat sur logogenie.fr !
+
+-------------------------------------
+
+DOSSIER VECTOR
+
+Avant d'ouvrir vos fichiers vectoriels, assurez-vous d'avoir installé l'ensemble des polices du dossier fonts.
+
+PC :
+
+- Clic droit sur le fichier police
+- Dans le menu déroulant, cliquez sur "installer"
+
+MAC : 
+
+- Double cliquez sur le fichier police
+- Cliquez sur le bouton "intaller"
+
+
+A QUOI SERT LE VECTORIEL? (fichier EPS, SVG & PDF vectorisé)
+
+L’intérêt d’avoir une image vectorisée est de pouvoir la redimensionner à volonté.
+Même avec de multiples agrandissements, l’image sera toujours de qualité. 
+En effet, comme elles sont créées grâce à des formules mathématiques, les lignes 
+vectorielles qui composent l’image sont automatiquement recalculées et adaptées à
+chaque changement de taille. En imprimant des produits, vous êtes garanti d'avoir une
+qualité optimale d'impression.
+
+--------------------------------------------------------------------
+
+DOSSIER PRINT
+
+Les fichiers compris dans le dossier print sont pour l'impression de cartes de visite, papier entête, affiches...
+Les fichiers sont au format HD (3000px de largeur, utilisez le format vectoriel pour le format XL)
+
+DOSSIER WEB
+
+Les fichiers compris dans le dossier web sont pour votre site internet, vos profiles réseaux sociaux, signature email...
+Les fichiers sont au 500px de largeur
+
+DOSSIER RESEAUX SOCIAUX (Option logogenie)
+
+Les fichiers dans le dossier réseaux sociaux sont destinés pour vos profiles Facebook, LinkedIn, twitter...
+
+--------------------------------------------------------------------
+
+Nous espérons que vous avez passé un agréable moment sur logogenie.
+Si vous avez d'autres questions ou vous avez un problème avec votre logo, n'hésitez
+pas à contacter notre support client sur logogenie.fr ou par email : support@logogenie.fr
+
+L'équipe Logogenie.
