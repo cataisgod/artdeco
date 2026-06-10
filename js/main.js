@@ -58,19 +58,34 @@
     var nav = document.querySelector('.mobile-nav');
     if (!burger || !nav) return;
 
-    var toggle = function () {
-      var isOpen = nav.classList.toggle('open');
-      burger.setAttribute('aria-expanded', String(isOpen));
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+    var closeBtn = nav.querySelector('.mobile-nav__close');
+    var matItem = nav.querySelector('.mobile-nav__item--has-sub');
+    var matBtn = matItem ? matItem.querySelector('.mobile-nav__btn') : null;
+
+    var openNav = function () {
+      nav.classList.add('open');
+      burger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
     };
 
-    burger.addEventListener('click', toggle);
-    nav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        nav.classList.remove('open');
-        burger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+    var closeNav = function () {
+      nav.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    };
+
+    burger.addEventListener('click', openNav);
+    if (closeBtn) closeBtn.addEventListener('click', closeNav);
+
+    if (matBtn && matItem) {
+      matBtn.addEventListener('click', function () {
+        matItem.classList.toggle('is-open');
       });
+    }
+
+    var links = nav.querySelectorAll('.mobile-nav__link, .mobile-nav__sub-all, .mobile-nav__sub-group a');
+    links.forEach(function (link) {
+      link.addEventListener('click', closeNav);
     });
   }
 

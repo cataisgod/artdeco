@@ -59,17 +59,36 @@
   </header>
 
   <!-- MOBILE NAV -->
-  <nav class="mobile-nav" aria-label="Mobile navigation">
-    <a href="materiale.html">Materials</a>
-    <a href="material-tadelakt.html">Tadelakt</a>
-    <a href="material-marmorino.html">Marmorino</a>
-    <a href="material-microciment.html">Microciment</a>
-    <a href="material-var-argila.html">Lime + Clay</a>
-    <a href="material-canepa-var.html">Hemp + Lime</a>
-    <a href="proiecte.html">Projects</a>
-    <a href="despre.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="https://www.instagram.com/artedeco.mc/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+    <div class="mobile-nav__header">
+      <a href="index.html" class="logo"><img src="images/logo/logo-color.png" alt="Art Deco" class="logo-img" /></a>
+      <button class="mobile-nav__close" aria-label="Close menu">&#x2715;</button>
+    </div>
+    <div class="mobile-nav__body">
+      <div class="mobile-nav__item mobile-nav__item--has-sub">
+        <button class="mobile-nav__btn">Materials <span class="mobile-nav__arrow">&#x25BC;</span></button>
+        <div class="mobile-nav__sub">
+          <a href="materiale.html" class="mobile-nav__sub-all">All materials &rarr;</a>
+          <div class="mobile-nav__sub-group">
+            <span class="mobile-nav__sub-label">Premium</span>
+            <a href="material-chukum.html">Chukum</a>
+            <a href="material-beton-cire.html">B&eacute;ton Cir&eacute;</a>
+          </div>
+          <div class="mobile-nav__sub-group">
+            <span class="mobile-nav__sub-label">Accessible Alternatives</span>
+            <a href="material-tadelakt.html">Tadelakt</a>
+            <a href="material-marmorino.html">Marmorino</a>
+            <a href="material-microciment.html">Microcement</a>
+            <a href="material-var-argila.html">Lime + Clay</a>
+            <a href="material-canepa-var.html">Hemp + Lime</a>
+          </div>
+        </div>
+      </div>
+      <a href="proiecte.html" class="mobile-nav__link">Projects</a>
+      <a href="despre.html" class="mobile-nav__link">About</a>
+      <a href="contact.html" class="mobile-nav__link">Contact</a>
+      <a href="https://www.instagram.com/artedeco.mc/" target="_blank" rel="noopener noreferrer" class="mobile-nav__link mobile-nav__link--social">Instagram &#x2197;</a>
+    </div>
   </nav>
 
   <!-- HERO -->
@@ -295,4 +314,5 @@
   <style>@media(max-width:768px){.alts-grid{grid-template-columns:1fr!important;}}</style>
 </body>
 </html>
+
 
