@@ -13,7 +13,9 @@
       "PowerShell(Copy-Item \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\logo \\(2\\)\\\\favicon\\\\favicon-32.png\" \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\images\\\\logo\\\\favicon-32.png\")",
       "PowerShell(Copy-Item \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\logo \\(2\\)\\\\favicon\\\\favicon-16.png\" \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\images\\\\logo\\\\favicon-16.png\")",
       "PowerShell(Copy-Item \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\logo \\(2\\)\\\\web\\\\logo-web-transparent.png\" \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\images\\\\logo\\\\logo-color.png\")",
-      "Bash(dir *.html /b)"
+      "Bash(dir *.html /b)",
+      "PowerShell(Rename-Item \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\logo parteneri\\\\logo archinvest\" \"logo archinvest.png\")",
+      "PowerShell(Rename-Item \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\logo parteneri\\\\logo belmont\" \"logo belmont.png\")"
     ],
     "additionalDirectories": [
       "c:\\Users\\Design Arhitectonica\\.claude\\projects\\c--xampp-htdocs-ArtDeco\\memory"
