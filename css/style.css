@@ -655,6 +655,55 @@ textarea:focus-visible {
 }
 .partner-logo:hover { opacity: 1; }
 
+/* Partners track — created by JS; on desktop shows logos in a wrap grid */
+.partners-track {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 40px;
+  flex: 1;
+}
+/* Hide duplicate logos on desktop */
+.partners-track .partner-logo[aria-hidden="true"] { display: none; }
+
+@media (max-width: 768px) {
+  .partners-list.is-marquee {
+    overflow: hidden;
+    padding: 0;
+    max-width: 100%;
+    /* keep display:flex but prevent track from wrapping */
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .partners-list.is-marquee .partners-track {
+    flex: none;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 48px;
+    padding: 0 24px;
+    width: max-content;
+    animation: partners-scroll 24s linear infinite;
+  }
+  /* Show duplicate logos inside the animated track */
+  .partners-list.is-marquee .partners-track .partner-logo[aria-hidden="true"] {
+    display: block;
+  }
+  @keyframes partners-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+}
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+  .partners-list.is-marquee { overflow: visible; flex-wrap: wrap; }
+  .partners-list.is-marquee .partners-track {
+    flex-wrap: wrap;
+    width: auto;
+    animation: none;
+    justify-content: center;
+    gap: 16px 32px;
+  }
+}
+
 /* ===========================================================
    FOOTER
    =========================================================== */

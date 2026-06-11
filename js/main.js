@@ -14,6 +14,7 @@
     initFilters();
     initSliders();
     initContactForm();
+    initPartnersMarquee();
   });
 
   /* ---------- Sticky header on scroll ---------- */
@@ -184,6 +185,29 @@
 
       update();
     });
+  }
+
+  /* ---------- Partners infinite marquee ---------- */
+  function initPartnersMarquee() {
+    var list = document.querySelector('.partners-list');
+    if (!list) return;
+    var logos = Array.prototype.slice.call(list.querySelectorAll('.partner-logo'));
+    if (!logos.length) return;
+
+    var track = document.createElement('div');
+    track.className = 'partners-track';
+    logos.forEach(function (logo) { track.appendChild(logo); });
+
+    // Duplicate logos inside same track for seamless loop (translateX -50%)
+    logos.forEach(function (logo) {
+      var clone = logo.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.appendChild(clone);
+    });
+
+    list.innerHTML = '';
+    list.appendChild(track);
+    list.classList.add('is-marquee');
   }
 
   /* ---------- Contact form (no backend) ---------- */
