@@ -210,18 +210,47 @@
     list.classList.add('is-marquee');
   }
 
-  /* ---------- Contact form (no backend) ---------- */
+  /* ---------- Contact form — submits to contact-submit.php ---------- */
   function initContactForm() {
     var form = document.querySelector('.contact-form');
     if (!form) return;
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var note = form.querySelector('.form-note');
-      if (note) {
-        note.textContent = 'Thank you. Your message has been recorded — we will be in touch soon.';
-        note.style.color = 'var(--color-accent)';
-      }
-      form.reset();
+      var note   = form.querySelector('.form-note');
+      var btn    = form.querySelector('button[type="submit"]');
+      var origTxt = btn ? btn.textContent : '';
+
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+      if (note) { note.textContent = ''; note.style.color = ''; }
+
+      var data = new FormData(form);
+
+      fetch('contact-submit.php', { method: 'POST', body: data })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (res.success) {
+            if (note) {
+              note.textContent = 'Thank you. Your message has been recorded — we will be in touch soon.';
+              note.style.color = 'var(--color-accent)';
+            }
+            form.reset();
+          } else {
+            if (note) {
+              note.textContent = res.error || 'Something went wrong. Please try again.';
+              note.style.color = '#c0392b';
+            }
+          }
+        })
+        .catch(function () {
+          if (note) {
+            note.textContent = 'Network error. Please try again.';
+            note.style.color = '#c0392b';
+          }
+        })
+        .finally(function () {
+          if (btn) { btn.disabled = false; btn.textContent = origTxt; }
+        });
     });
   }
 })();

@@ -16,7 +16,8 @@
       "Bash(dir *.html /b)",
       "PowerShell(Rename-Item \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\logo parteneri\\\\logo archinvest\" \"logo archinvest.png\")",
       "PowerShell(Rename-Item \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\logo parteneri\\\\logo belmont\" \"logo belmont.png\")",
-      "Bash(Get-ChildItem \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\poze tadelakt\")"
+      "Bash(Get-ChildItem \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\poze tadelakt\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\xampp\\\\htdocs\\\\ArtDeco\\\\admin\")"
     ],
     "additionalDirectories": [
       "c:\\Users\\Design Arhitectonica\\.claude\\projects\\c--xampp-htdocs-ArtDeco\\memory"
