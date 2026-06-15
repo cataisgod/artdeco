@@ -1217,3 +1217,43 @@ textarea:focus-visible {
   .nav-social { font-size: 2.4rem; }
   .nav-social svg { width: 26px; height: 26px; }
 }
+
+/* ===========================================================
+   LANGUAGE SWITCHER
+   =========================================================== */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 12px;
+}
+.lang-btn {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 3px 7px;
+  cursor: pointer;
+  transition: color 0.25s var(--ease), border-color 0.25s var(--ease);
+  line-height: 1.4;
+}
+.lang-btn:hover { color: var(--color-ink); }
+.lang-btn.is-active {
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+}
+/* On dark headers (index hero) */
+.site-header.on-dark .lang-btn { color: rgba(255,255,255,0.65); }
+.site-header.on-dark .lang-btn:hover { color: rgba(255,255,255,1); }
+.site-header.on-dark .lang-btn.is-active { color: #fff; border-color: rgba(255,255,255,0.7); }
+.site-header.scrolled .lang-btn { color: var(--color-ink-muted); }
+.site-header.scrolled .lang-btn.is-active { color: var(--color-ink); border-color: var(--color-ink); }
+
+@media (max-width: 768px) {
+  .lang-switcher { margin-left: 8px; margin-right: 8px; }
+  .lang-btn { padding: 3px 6px; font-size: 0.65rem; }
+}

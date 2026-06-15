@@ -7,6 +7,7 @@
   'use strict';
 
   document.addEventListener('DOMContentLoaded', function () {
+    if (typeof ArtDecoI18n !== 'undefined') ArtDecoI18n.init();
     initStickyHeader();
     initMegaMenu();
     initMobileNav();
@@ -219,9 +220,10 @@
       e.preventDefault();
       var note   = form.querySelector('.form-note');
       var btn    = form.querySelector('button[type="submit"]');
-      var origTxt = btn ? btn.textContent : '';
+      var origHTML = btn ? btn.innerHTML : '';
+      var i18n = typeof ArtDecoI18n !== 'undefined' ? ArtDecoI18n : null;
 
-      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+      if (btn) { btn.disabled = true; btn.textContent = i18n ? i18n.t('btn_sending') : 'Sending…'; }
       if (note) { note.textContent = ''; note.style.color = ''; }
 
       var data = new FormData(form);
@@ -231,25 +233,25 @@
         .then(function (res) {
           if (res.success) {
             if (note) {
-              note.textContent = 'Thank you. Your message has been recorded — we will be in touch soon.';
+              note.textContent = i18n ? i18n.t('contact_success') : 'Thank you. Your message has been recorded — we will be in touch soon.';
               note.style.color = 'var(--color-accent)';
             }
             form.reset();
           } else {
             if (note) {
-              note.textContent = res.error || 'Something went wrong. Please try again.';
+              note.textContent = res.error || (i18n ? i18n.t('contact_error_gen') : 'Something went wrong. Please try again.');
               note.style.color = '#c0392b';
             }
           }
         })
         .catch(function () {
           if (note) {
-            note.textContent = 'Network error. Please try again.';
+            note.textContent = i18n ? i18n.t('contact_error_net') : 'Network error. Please try again.';
             note.style.color = '#c0392b';
           }
         })
         .finally(function () {
-          if (btn) { btn.disabled = false; btn.textContent = origTxt; }
+          if (btn) { btn.disabled = false; btn.innerHTML = origHTML; }
         });
     });
   }
